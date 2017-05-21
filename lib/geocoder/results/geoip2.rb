@@ -44,6 +44,10 @@ module Geocoder
         data.fetch('postal', {}).fetch('code', '')
       end
 
+      def time_zone
+        data.fetch('location', {}).fetch('time_zone', '')
+      end
+
       def self.response_attributes
         %w[ip]
       end
